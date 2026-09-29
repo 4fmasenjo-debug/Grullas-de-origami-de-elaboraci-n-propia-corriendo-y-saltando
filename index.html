@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Origami animado</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      background-color: #fdf6e3;
+      overflow: hidden;
+    }
+
+    .run {
+      width: 200px;
+      height: 200px;
+      transform-origin: center;
+      animation: run 4s linear infinite;
+    }
+
+    .jump {
+      width: 200px;
+      height: 200px;
+      transform-origin: center;
+      animation: jump 2s ease-in-out infinite;
+    }
+
+    @keyframes run {
+      0% {
+        transform: translateX(-100%) scale(1);
+      }
+      50% {
+        transform: translateX(100%) scale(1.05);
+      }
+      100% {
+        transform: translateX(-100%) scale(1);
+      }
+    }
+
+    @keyframes jump {
+      0%, 100% {
+        transform: translateY(0px) scale(1);
+      }
+      50% {
+        transform: translateY(-20px) scale(1.05);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- Grulla que CORRE -->
+    <svg class="run" viewBox="0 0 280 300">
+      <polygon points="50,150 45,111 65,123" fill="#43486B"/>
+      <polygon points="165,30 210,160 115,160" fill="#D9AC1A"/>
+      <polygon points="55,89 49,111 115,160 135,127" fill="#E81E2F"/>
+      <polygon points="50,150 49,111 65,123" fill="#5D3DC7"/>  
+      <polygon points="170,150 210,160 250,55" fill="#DB2134"/> 
+      <polygon points="165,80 210,160 115,160" fill="#16C453"/>
+      <polygon points="165,300 210,160 115,160" fill="#FFCC1F"/> 
+    </svg>
+  </div>
+
+  <div>
+    <!-- cisne que SALTA -->
+    <svg class="jump" viewBox="0 0 280 300">
+      <polygon points="50,150 45,111 65,123" fill="#43486B"/>
+      <polygon points="165,30 210,160 115,160" fill="#D9AC1A"/>
+      <polygon points="55,89 49,111 115,160 135,127" fill="#E81E2F"/>
+      <polygon points="50,150 49,111 65,123" fill="#5D3DC7"/>  
+      <polygon points="170,150 210,160 250,55" fill="#DB2134"/> 
+      <polygon points="165,80 210,160 115,160" fill="#16C453"/>
+      <polygon points="165,300 210,160 115,160" fill="#FFCC1F"/> 
+    </svg>
+  </div>
+</body>
+</html>
+
+
+
